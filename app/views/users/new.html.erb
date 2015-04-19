@@ -1,0 +1,12 @@
+<h1>User</h1>
+<%= form_for @user do |f| %>
+  <%= f.label "First Name" %>
+  <%= f.text_field :first_name %>
+  <%= f.label "Last Name" %>
+  <%= f.text_field :last_name %>
+  <%= f.fields_for :images do |i| %>
+    <%= i.label "Image" %>
+    <%= i.text_field :attachment %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
